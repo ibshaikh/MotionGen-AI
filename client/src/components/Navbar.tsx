@@ -3,6 +3,7 @@ import { PrimaryButton } from './Buttons';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import { assets } from '../assets/assets';
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +24,7 @@ export default function Navbar() {
         >
             <div className='max-w-6xl mx-auto flex items-center justify-between bg-black/50 backdrop-blur-md border border-white/4 rounded-2xl p-3'>
                 <Link to='/' onClick={()=>scrollTo(0,0)}>
-                    <img src='/logo.svg' alt="logo" className="h-8" />
+                    <img src={assets.logo} alt="logo" className="h-8" />
                 </Link>
 
                 <div className='hidden md:flex items-center gap-8 text-sm font-medium text-gray-300'>
