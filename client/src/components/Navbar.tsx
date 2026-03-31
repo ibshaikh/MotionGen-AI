@@ -42,7 +42,7 @@ export default function Navbar() {
                     <PrimaryButton className='max-sm:text-xs hidden sm:inline-block'>Get Started</PrimaryButton>
                 </div>
 
-                <button onClick={() => setIsOpen(!isOpen)} className='md:hidden'>
+                <button onClick={() => setIsOpen(!isOpen)} className='md:hidden' title='Open menu'>
                     <MenuIcon className='size-6' />
                 </button>
             </div>
@@ -61,10 +61,11 @@ export default function Navbar() {
                 <button
                     onClick={() => setIsOpen(false)}
                     className="rounded-md bg-white p-2 text-gray-800 ring-white active:ring-2"
+                    title="Close menu"
                 >
                     <XIcon />
                 </button>
             </div>
         </motion.nav>
     );
-};
+}; 
